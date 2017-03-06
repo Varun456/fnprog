@@ -1,0 +1,33 @@
+<div class="container jumbotron text-center wow fadeInUp" data-wow-delay="0.5s">
+  <h1 style="color:grey;">Select your Movie!</h1>
+  <p style="color:darkgrey;">{{ tagline }}</p>
+
+  <br>
+  <br>
+   <div>
+     <center>
+       <table class="table">
+         <thead>
+           <tr>
+             <th style="font-size:20px;">Movie Name</th>
+           </tr>
+         </thead>
+
+         <tbody>
+           <tr>
+             <td><input ng-model="movi.moviTitle" /></td>
+             <td><button ng-click="addMovie(movi)" class="btn btn-success">Add </button></td>
+             <td><button ng-click="updateMovie(movi)" class="btn btn-primary">Update</button></td>
+           </tr>
+
+           <tr ng-repeat=" movi in moviList">
+             <td>{{movi.moviTitle}}</td>
+             <td>{{movi.moviDirector}}</td>
+             <td> <img style="box-shadow:15px 15px 15px grey; height:270px; width:210px;" src="{{movi.moviPoster}}"></td>
+             <td><button ng-click="removeMovie(movi)" class="btn btn-danger">Remove</button></td>
+             <td><button ng-click="editMovie(movi)" class="btn btn-primary">Edit</button></td>
+           </tr>
+         </tbody>
+       </table>
+     </center>
+   </div>

@@ -1,0 +1,32 @@
+<div class="container jumbotron text-center">
+  <h1 style="color:grey">Select your City!</h1>
+  <p style="color:darkgrey">{{ tagline }}</p>
+
+  <br>
+  <br>
+   <div>
+     <center>
+       <table class="table">
+         <thead>
+           <tr>
+             <th style="font-size:20px;">City List</th>
+             <th style="font-size:20px;">Functions</th>
+           </tr>
+         </thead>
+
+         <tbody>
+           <tr>
+             <td><input ng-model="city.cityName" /></td>
+             <td><button ng-click="addCity(city)" class="btn btn-success">Add </button></td>
+             <td><button ng-click="updateCity(city)" class="btn btn-primary">Update</button></td>
+           </tr>
+
+           <tr ng-repeat=" city in cityList">
+             <td>{{city.cityName}}</td>
+             <td><button ng-click="removeCity(city)" class="btn btn-danger">Remove</button></td>
+             <td><button ng-click="editCity(city)" class="btn btn-primary">Edit</button></td>
+           </tr>
+         </tbody>
+       </table>
+     </center>
+   </div>

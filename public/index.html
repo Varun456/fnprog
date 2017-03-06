@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+
+    <title>Movie Booking</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- custom styles -->
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+
+    <!-- ANGULAR CUSTOM -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers/MainCtrl.js"></script>
+    <script src="js/controllers/cancellationCtrl.js"></script>
+    <script src="js/controllers/BookingCtrl.js"></script>
+    <script src="js/services/NerdService.js"></script>
+    <script src="js/controllers/MovieCtrl.js"></script>
+    <script src="js/controllers/AssignCtrl.js"></script>
+    <script src="js/controllers/CityCtrl.js"></script>
+    <script src="js/controllers/ShowTimeCtrl.js"></script>
+    <script src="js/controllers/Theatrectrl.js"></script>
+    <script src="js/services/GeekService.js"></script>
+    <script src="js/appRoutes.js"></script>
+
+    <style>
+    body {
+      background-color: #f9ebb6;
+    }
+
+     button {
+       box-shadow: 12px 12px 12px grey;
+     }
+    </style>
+
+</head>
+<body ng-app="sampleApp">
+  <br>
+  <br>
+<div class="container">
+  <ul class="nav navbar-inverse navbar-fixed-top">
+    <li>
+      <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+    </li>
+
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin<strong class="caret"></strong></a>
+      <ul class="dropdown-menu">
+        <li><a data-toggle="tab" href="/movies"><span class="glyphicon glyphicon-film"></span> Movies</a></li>
+        <li><a data-toggle="tab" href="/city"><span class="glyphicon glyphicon-road"></span> City</a></li>
+        <li><a data-toggle="tab" href="/theatre"><span class="glyphicon glyphicon-picture"></span> Theatre</a></li>
+        <li><a data-toggle="tab" href="/showtime"><span class="glyphicon glyphicon-time"></span> Showtime</a></li>
+        <li><a data-toggle="tab" href="/assign"><span class="glyphicon glyphicon-floppy-disk"></span> Assign</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="/cancel"><span class="glyphicon glyphicon-remove-sign"></span> Cancellation</a>
+    </li>
+  </ul>
+</div>
+</div>
+<br>
+
+  <!-- ANGULAR DYNAMIC CONTENT -->
+  <div ng-view></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.js"></script>
+
+  <br><br><br>
+    <div class="nav navbar-inverse navbar-fixed-bottom">
+      <hr>
+      <p><h4>Movieking.com &copy;</h4></p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <p></p>
+      <hr>
+    <div>
+
+</body>
+</html>
